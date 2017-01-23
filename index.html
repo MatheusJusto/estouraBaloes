@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Estourando balões</title>
+
+	</head>
+
+	<body>
+			<label for="">Selecione a dificuldade</label>
+			<select name="selecionaDificult" id="selecionaDificult">
+				<option value="1">Fácil</option>
+				<option value="2">Médio</option>
+				<option value="3">Difícil</option>
+			</select>
+
+
+		<img src="imagens/iniciar.png" alt="play" id="apertaPlay" >
+
+
+
+		<script >
+
+			var iniciaJogo = (function(){
+				var mostraValor = document.getElementById('apertaPlay').addEventListener('click', function() {
+					var pegaDificuldade = document.getElementById('selecionaDificult').value;
+					window.location.href= "jogo.html?" + pegaDificuldade;
+				})
+			}());		
+
+		</script>
+	</body>
+	
+</html>
